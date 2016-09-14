@@ -1,0 +1,44 @@
+<dataSource name="MySQL - test@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="test">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="information_schema" />
+    <schema id="3" name="mysql" />
+    <schema id="4" name="performance_schema" />
+    <schema id="5" name="sakila" />
+    <schema id="6" name="sys" />
+    <schema id="7" name="world" />
+    <table id="8" parent="1" name="user" />
+    <table id="9" parent="1" name="posts" />
+    <column id="10" parent="8" name="USER_ID">
+      <mandatory>1</mandatory>
+      <data-type>int(10) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="11" parent="8" name="FIRST_NAME">
+      <mandatory>1</mandatory>
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="12" parent="8" name="LAST_NAME">
+      <mandatory>1</mandatory>
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <key id="13" parent="8" name="PRIMARY">
+      <columns>USER_ID</columns>
+      <primary>1</primary>
+    </key>
+    <column id="14" parent="9" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="15" parent="9" name="text">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="16" parent="9" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>
