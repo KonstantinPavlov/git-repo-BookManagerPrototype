@@ -12,6 +12,7 @@
     <title>Guest book posts</title>
 </head>
 <body>
+<h1>Book manager prototype</h1>
 <table border="1">
     <c:forEach items="${posts}" var="post">
     <tr>
@@ -24,16 +25,20 @@
         </td>
     </tr>
     </c:forEach>
-    <form action="/add" method="POST">
-        <tr>
-            <td colspan="2">
-                <input name="text" type="text">
-            </td>
-            <td>
-                <input type="submit">
-            </td>
-        </tr>
-    </form>
 </table>
+<p>You can add entry here:</p>
+<form action="/add" method="POST">
+    <tr>
+        <td colspan="2">
+            <input name="text" type="text">
+        </td>
+        <td>
+            <input type="submit">
+        </td>
+    </tr>
+</form>
+<h2>F.A.Q.</h2>
+<p>This icon delete an entry from base:   <img src="delete.png"></p>
+<p>This icon adds an entry :   <img src="add.png"></p>
 </body>
 </html>
